@@ -1,137 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Overview</title>
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Overview</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
-<div class="layout">
+<div class="container-fluid min-vw-100">
+  <div class="row flex-nowrap">
+
     <!-- Sidebar -->
-    <aside class="sidebar">
-        <h1 class="logo">Dashboard Kit</h1>
-
-        <nav>
-            <ul class="menu">
-                <li class="active">Overview</li>
-                <li>Tickets</li>
-                <li>Ideas</li>
-                <li>Contacts</li>
-                <li>Agents</li>
-                <li>Articles</li>
-
-                <li class="section">Settings</li>
-                <li class="section">Subscription</li>
-            </ul>
-        </nav>
-    </aside>
+    <nav class="col-auto col-md-3 col-xl-2 px-3 sidebar">
+      <h1 class="h4 mb-4">Dashboard Kit</h1>
+      <ul class="menu p-0">
+        <li class="active">Overview</li>
+        <li>Tickets</li>
+        <li>Ideas</li>
+        <li>Contacts</li>
+        <li>Agents</li>
+        <li>Articles</li>
+        <li class="mt-3 section">Settings</li>
+        <li class="section">Subscription</li>
+      </ul>
+    </nav>
 
     <!-- Main content -->
-    <main class="main">
+    <main class="col px-4 py-3">
+      <!-- Top Header -->
+      <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
+        <h1 class="h2">Overview</h1>
+        <div class="d-flex align-items-center flex-wrap gap-2">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          <div class="profile d-flex align-items-center">
+            <span class="me-2">Jones Ferdinand</span>
+            <img src="https://i.pravatar.cc/40" alt="Profile picture">
+          </div>
+        </div>
+      </div>
 
-        <!-- Top Header -->
-        <header class="topbar">
-            <h1>Overview</h1>
+      <!-- Stats Cards -->
+      <div class="row mb-4 g-3">
+        <div class="col-6 col-sm-6 col-md-3">
+          <div class="stat-card">
+            <p>Unresolved</p>
+            <h2>60</h2>
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-3">
+          <div class="stat-card active">
+            <p>Overdue</p>
+            <h2>16</h2>
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-3">
+          <div class="stat-card">
+            <p>Open</p>
+            <h2>43</h2>
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-3">
+          <div class="stat-card">
+            <p>On hold</p>
+            <h2>64</h2>
+          </div>
+        </div>
+      </div>
 
-            <section class="topbar-right">
-                <form>
-                    <input type="text" placeholder="Search" aria-label="Search">
-                </form>
-                <figure class="icon"></figure>
-                <section class="profile">
-                    <span>Jones Ferdinand</span>
-                    <img src="https://i.pravatar.cc/40" alt="Profile picture of Jones Ferdinand">
-                </section>
-            </section>
-        </header>
+      <!-- Trends + Right Stats -->
+      <div class="row mb-4 g-3">
+    <!-- Trend Image -->
+    <div class="col-lg-8 col-md-12">
+        <div class="card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="mb-0">Today's trends</h5>
+                <small class="text-muted">as of 25 May 2019, 09:41 PM</small>
+            </div>
+            <div class="trend-image-wrapper">
+                <img src="/images/image 1.png" alt="Today's trends">
+            </div>
+        </div>
+    </div>
 
-        <!-- Stats Cards -->
-        <section class="stats-card-row">
-            <article class="stat-card">
-                <p>Unresolved</p>
-                <h2>60</h2>
-            </article>
-            <article class="stat-card active">
-                <p>Overdue</p>
-                <h2>16</h2>
-            </article>
-            <article class="stat-card">
-                <p>Open</p>
-                <h2>43</h2>
-            </article>
-            <article class="stat-card">
-                <p>On hold</p>
-                <h2>64</h2>
-            </article>
-        </section>
+    <!-- Right Stats -->
+    <div class="col-lg-4 col-md-12">
+        <div class="card p-3 h-100">
+            <ul class="list-unstyled mb-0">
+                <li class="d-flex justify-content-between mb-2"><span>Resolved</span><strong>449</strong></li>
+                <li class="d-flex justify-content-between mb-2"><span>Received</span><strong>426</strong></li>
+                <li class="d-flex justify-content-between mb-2"><span>Avg first response</span><strong>33m</strong></li>
+                <li class="d-flex justify-content-between mb-2"><span>Avg response</span><strong>3h 8m</strong></li>
+                <li class="d-flex justify-content-between"><span>Resolution within SLA</span><strong>94%</strong></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-        <!-- Trends + Right Stats -->
-        <section class="trend-section">
 
-            <article class="trend-card">
-                <header>
-                    <h3>Today's trends</h3>
-                    <p class="timestamp">as of 25 May 2019, 09:41 PM</p>
-                </header>
-                <canvas id="trendChart"></canvas>
-                <img src="" alt="">
-            </article>
+      <!-- Bottom Panels -->
+      <div class="row g-3">
+        <!-- Unresolved Tickets -->
+        <div class="col-lg-6 col-md-12">
+          <div class="card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h5 class="mb-0">Unresolved tickets</h5>
+              <a href="#">View details</a>
+            </div>
+            <p class="text-muted mb-2">Group: Support</p>
+            <table class="table table-striped mb-0">
+              <tbody>
+                <tr><td>Waiting on Feature Request</td><td class="text-end">4238</td></tr>
+                <tr><td>Awaiting Customer Response</td><td class="text-end">1005</td></tr>
+                <tr><td>Awaiting Developer Fix</td><td class="text-end">914</td></tr>
+                <tr><td>Pending</td><td class="text-end">281</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
-            <aside class="right-panel">
-                <ul>
-                    <li><p>Resolved</p><h2>449</h2></li>
-                    <li><p>Received</p><h2>426</h2></li>
-                    <li><p>Average first response time</p><h2>33m</h2></li>
-                    <li><p>Average response time</p><h2>3h 8m</h2></li>
-                    <li><p>Resolution within SLA</p><h2>94%</h2></li>
-                </ul>
-            </aside>
-
-        </section>
-
-        <!-- Bottom Panels -->
-        <section class="bottom-section">
-
-            <!-- Unresolved Tickets -->
-            <article class="table-card">
-                <header class="card-header">
-                    <h3>Unresolved tickets</h3>
-                    <a href="#">View details</a>
-                </header>
-                <p class="group-label">Group: Support</p>
-
-                <table>
-                    <tr><td>Waiting on Feature Request</td><td class="number">4238</td></tr>
-                    <tr><td>Awaiting Customer Response</td><td class="number">1005</td></tr>
-                    <tr><td>Awaiting Developer Fix</td><td class="number">914</td></tr>
-                    <tr><td>Pending</td><td class="number">281</td></tr>
-                </table>
-            </article>
-
-            <!-- Tasks -->
-            <article class="table-card">
-                <header class="card-header">
-                    <h3>Tasks</h3>
-                    <a href="#">View all</a>
-                </header>
-
-                <p class="group-label">Today</p>
-                <button class="new-task-btn">+ Create new task</button>
-
-                <ul class="task-list">
-                    <li><input type="checkbox"> Finish ticket update <span class="tag urgent">URGENT</span></li>
-                    <li><input type="checkbox"> Create new ticket example <span class="tag new">NEW</span></li>
-                    <li><input checked type="checkbox"> Update ticket report <span class="tag default">DEFAULT</span></li>
-                </ul>
-            </article>
-
-        </section>
+        <!-- Tasks -->
+        <div class="col-lg-6 col-md-12">
+          <div class="card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h5 class="mb-0">Tasks</h5>
+              <a href="#">View all</a>
+            </div>
+            <p class="text-muted mb-2">Today</p>
+            <button class="btn btn-primary mb-3">+ Create new task</button>
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div><input class="form-check-input me-2" type="checkbox"> Finish ticket update</div>
+                <span class="tag urgent">URGENT</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div><input class="form-check-input me-2" type="checkbox"> Create new ticket example</div>
+                <span class="tag new">NEW</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div><input class="form-check-input me-2" type="checkbox" checked> Update ticket report</div>
+                <span class="tag default">DEFAULT</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
     </main>
-
+  </div>
 </div>
+
 
 </body>
 </html>

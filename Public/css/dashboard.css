@@ -1,0 +1,84 @@
+/* Sidebar */
+.sidebar {
+    min-height: 100vh;
+    background-color: #343a40;
+    color: white;
+    padding: 1rem;
+}
+
+.sidebar .menu li {
+    list-style: none;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.sidebar .menu li:hover {
+    color: #0d6efd;
+}
+
+.sidebar .menu li.active {
+    font-weight: bold;
+}
+
+/* Profile image */
+.profile img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+/* Stat cards */
+.stat-card {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+}
+
+.stat-card.active {
+    border-top: 3px solid #0d6efd;
+}
+
+/* Tags for tasks */
+.tag {
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    font-size: 0.75rem;
+    color: white;
+    white-space: nowrap;
+}
+
+.tag.urgent { background-color: #dc3545; }
+.tag.new { background-color: #0d6efd; }
+.tag.default { background-color: #6c757d; }
+
+/* Card styling */
+.card {
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Table adjustments */
+.table td, .table th {
+    vertical-align: middle;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .sidebar {
+        min-height: auto;
+        padding: 0.5rem;
+    }
+    .profile span {
+        display: none;
+    }
+}
+
