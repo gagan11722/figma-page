@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Overview</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h1 class="logo">Dashboard Kit</h1>
+
+        <nav>
+            <ul class="menu">
+                <li class="active">Overview</li>
+                <li>Tickets</li>
+                <li>Ideas</li>
+                <li>Contacts</li>
+                <li>Agents</li>
+                <li>Articles</li>
+
+                <li class="section">Settings</li>
+                <li class="section">Subscription</li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+
+        <!-- Top Header -->
+        <header class="topbar">
+            <h1>Overview</h1>
+
+            <section class="topbar-right">
+                <form>
+                    <input type="text" placeholder="Search" aria-label="Search">
+                </form>
+                <figure class="icon"></figure>
+                <section class="profile">
+                    <span>Jones Ferdinand</span>
+                    <img src="https://i.pravatar.cc/40" alt="Profile picture of Jones Ferdinand">
+                </section>
+            </section>
+        </header>
+
+        <!-- Stats Cards -->
+        <section class="stats-card-row">
+            <article class="stat-card">
+                <p>Unresolved</p>
+                <h2>60</h2>
+            </article>
+            <article class="stat-card active">
+                <p>Overdue</p>
+                <h2>16</h2>
+            </article>
+            <article class="stat-card">
+                <p>Open</p>
+                <h2>43</h2>
+            </article>
+            <article class="stat-card">
+                <p>On hold</p>
+                <h2>64</h2>
+            </article>
+        </section>
+
+        <!-- Trends + Right Stats -->
+        <section class="trend-section">
+
+            <article class="trend-card">
+                <header>
+                    <h3>Today's trends</h3>
+                    <p class="timestamp">as of 25 May 2019, 09:41 PM</p>
+                </header>
+                <canvas id="trendChart"></canvas>
+                <img src="" alt="">
+            </article>
+
+            <aside class="right-panel">
+                <ul>
+                    <li><p>Resolved</p><h2>449</h2></li>
+                    <li><p>Received</p><h2>426</h2></li>
+                    <li><p>Average first response time</p><h2>33m</h2></li>
+                    <li><p>Average response time</p><h2>3h 8m</h2></li>
+                    <li><p>Resolution within SLA</p><h2>94%</h2></li>
+                </ul>
+            </aside>
+
+        </section>
+
+        <!-- Bottom Panels -->
+        <section class="bottom-section">
+
+            <!-- Unresolved Tickets -->
+            <article class="table-card">
+                <header class="card-header">
+                    <h3>Unresolved tickets</h3>
+                    <a href="#">View details</a>
+                </header>
+                <p class="group-label">Group: Support</p>
+
+                <table>
+                    <tr><td>Waiting on Feature Request</td><td class="number">4238</td></tr>
+                    <tr><td>Awaiting Customer Response</td><td class="number">1005</td></tr>
+                    <tr><td>Awaiting Developer Fix</td><td class="number">914</td></tr>
+                    <tr><td>Pending</td><td class="number">281</td></tr>
+                </table>
+            </article>
+
+            <!-- Tasks -->
+            <article class="table-card">
+                <header class="card-header">
+                    <h3>Tasks</h3>
+                    <a href="#">View all</a>
+                </header>
+
+                <p class="group-label">Today</p>
+                <button class="new-task-btn">+ Create new task</button>
+
+                <ul class="task-list">
+                    <li><input type="checkbox"> Finish ticket update <span class="tag urgent">URGENT</span></li>
+                    <li><input type="checkbox"> Create new ticket example <span class="tag new">NEW</span></li>
+                    <li><input checked type="checkbox"> Update ticket report <span class="tag default">DEFAULT</span></li>
+                </ul>
+            </article>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
